@@ -1,43 +1,51 @@
 import type {ReactNode} from 'react';
-import clsx from 'clsx';
-import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
-import Heading from '@theme/Heading';
-
 import styles from './index.module.css';
-
-function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
-        </div>
-      </div>
-    </header>
-  );
-}
+import Hero from '../components/Hero';
+import Skills from '../components/Skills';
+import Projects from '../components/Projects';
+import Contact from '../components/Contact';
 
 export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
+
+  const skills = {
+    'Languages': ['Python', 'Javascript', 'Go', 'SQL'],
+    'Cloud': ['AWS'],
+    'Tools': ['Git', 'Docker', 'Kubernetes', 'Databricks'],
+  };
+
+  const projects = [
+    {
+      title: 'PoC: Authentication Environment',
+      description: 'Proof of Concept for an authentication environment using Keycloak. Explores identity and access management solutions.',
+      tags: ['Keycloak', 'Authentication', 'Security'],
+      link: 'https://github.com/jeniferss/PoCAuth',
+    },
+    {
+      title: 'Spotify Music Recommendations',
+      description: 'Software engineering project to build a recommendation system for Spotify music.',
+      tags: ['Software Engineering', 'Python'],
+      link: 'https://github.com/jeniferss/DataEngineeringStudies/tree/feat/atividade02',
+    },
+    {
+      title: 'Medallion Architecture with AWS S3',
+      description: 'Data architecture implementation using the Medallion architecture pattern with AWS S3 for data lake storage and processing.',
+      tags: ['AWS S3', 'Data Lake', 'Medallion Architecture', 'Spark', 'Airflow'],
+      link: 'https://github.com/jeniferss/DataEngineeringStudies/tree/feat/atividade07',
+    },
+  ];
+
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
-      <HomepageHeader />
-      <main>
-        <HomepageFeatures />
+      title={`${siteConfig.title} - Technical Learning & Notes`}
+      description="Personal documentation, book notes, and technical learning resources.">
+      <main className={styles.main}>
+        <Hero />
+        <Skills skills={skills} />
+        <Projects projects={projects} />
+        <Contact />
       </main>
     </Layout>
   );

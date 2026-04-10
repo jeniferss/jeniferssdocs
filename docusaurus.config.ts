@@ -7,7 +7,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'jeniferssdocs',
   tagline: 'Documentation for Jenifer S Souza',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/chamaleonColor.svg',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -62,15 +62,15 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    // image: 'img/docusaurus-social-card.jpg',
     colorMode: {
       respectPrefersColorScheme: true,
     },
     navbar: {
       title: 'jeniferssdocs',
       logo: {
-        alt: 'jeniferssdocs Logo',
-        src: 'img/logo.svg',
+        alt: 'Chameleon Logo',
+        src: 'img/chamaleonColor.svg'
       },
       items: [
           {
