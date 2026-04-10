@@ -1,5 +1,8 @@
 # Clean Architecture
 
+> This book, written by Robert C. Martin, presents universal principles of software architecture that aim to improve the 
+> quality of system development throughout its lifecycle.
+
 All software systems provide two fundamental types of value:
 
 1. **Behavior (Functionality)**
@@ -46,3 +49,19 @@ There are three major concerns in software architecture:
 1. **Functionality**: Ensuring the system fulfills its intended behavior.
 2. **Component Segregation**: Organizing the system into well-defined, independent components.
 3. **Data Management**: Handling how data is structured, accessed, and maintained.
+
+---
+## Structured Programming
+
+Structured Programming is based on the idea that any program can be constructed using three fundamental control 
+structures: sequence, selection and repetition, avoiding constructs like unrestricted `goto` statements.
+
+The main goal of structured programming is to enable decomposition of complex problems into smaller, manageable parts. 
+In practice, large-scale problems are broken down into high-level functions which can be recursively decomposed into 
+smaller units and this process continues until reaching easily understandable operations.
+
+
+> Tests can be compared to the scientific method: they do not prove that a program is correct; they only reveal when it 
+> is incorrect. In practice, what can be demonstrated is that the system is correct enough to fulfill its intended 
+> purpose. Even so, the possibility of bugs can never be completely eliminated.
+

@@ -42,10 +42,6 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-        //   editUrl:
-        //     'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
           showReadingTime: true,
@@ -53,11 +49,6 @@ const config: Config = {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          // editUrl:
-          //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
@@ -82,6 +73,15 @@ const config: Config = {
         src: 'img/logo.svg',
       },
       items: [
+          {
+              label: 'Docs',
+              position: 'right',
+              type: 'dropdown',
+              items: [
+                  {label: 'Book Notes', to: 'docs/category/notes-from-books'},
+                  {label: 'Studies Notes', to: 'docs/category/notes-from-personal-studies'}
+              ]
+          },
         {
           href: 'https://github.com/jeniferss/jeniferssdocs',
           label: 'GitHub',
